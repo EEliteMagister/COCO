@@ -1,0 +1,235 @@
+
+<html>
+
+   <head>
+   
+ <meta name="viewport" id="viewport" content="width=device-width" />  
+  <meta name="theme-color" content="#aaaaaa" /> 
+  <title>CHAT - coco.gg</title>
+<script LANGUAGE="JavaScript">
+
+
+var s7=""+location.href;
+var s11=s7.indexOf('#',0);
+var srv=s7.substring(s11+1,s11+2);
+
+var s4=s7.substring(s11+2);
+
+</script>
+
+
+
+
+</head>
+<body style='background-color:eeeeee;margin:0;overflow:auto;' onhashchange="refresho();">
+
+
+
+<script LANGUAGE="JavaScript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+function refresho()
+{
+s7=""+location.href;
+
+
+
+
+
+if(s7.indexOf("NEW")==-1)
+{
+
+//var srv=1+Math.floor(3*Math.random());
+var s11=s7.indexOf('#',0);
+var srv=s7.substring(s11+1,s11+2);
+
+var oka="http://pix"+srv+".coco.gg/upload/"+s7.substring(s11+2);
+
+if(s7.indexOf("https")>-1)
+oka="https"+oka.substring(4);
+
+
+var imog = new Image();
+imog.src=oka;
+
+var stox="";
+
+var lengas=oka.length;
+var oko=oka.toLowerCase();
+
+var memor=0;
+var memoz=600;
+
+
+var carosmax=48;
+var caros=carosmax;
+var carosy=12;
+
+var ratius=0;
+
+var alterno=0;
+
+var xo,yo;
+
+var dejaresize=false;
+var readywindow=false;
+var iter=0;
+
+
+
+
+
+var iepix="";
+
+caros=0;
+
+stox="";
+
+
+if ((oko.indexOf('jpg')>lengas-4)||(oko.indexOf('gif')>lengas-4)||(oko.indexOf('png')>lengas-4))
+{
+
+stox+="<img onclick=getback(); id=imago GALLERYIMG=NO  width=100% src="+oka+" "+iepix+" style='z-index:10;'>";
+
+}
+
+stox+="<div id=containo onclick=showu(); style='position:absolute;left:0;top:0;width:80px;height:100%;z-index:21;'></div>";
+document.body.innerHTML=stox;
+
+var coul=["57bb8a","73b87e","94bd77","b0be6e","d4c86a","f5ce62","e9b861","ecac67","e79a69","e2886c","dd776e","","",""];
+stox="<div id=voto style='position:absolute;left:0;top:0;width:80px;height:100%;z-index:22;display:none;'>"
+for (i=0; i<11; i++)
+stox+="<div id='voti"+i+"' class='vota' onmousedown=votus('"+i+"'); style='text-align:center;line-height: 40px;background-color:"+coul[i]+";position:absolute;cursor:default;top:"+(480-i*48)+"px;left:5px;width:40px;height:40px;user-select: none;border-radius:6px;border-style:solid;border-width:2px;border-color:#000;z-index:22;'>"+i+"</div>";
+stox+="</div>";
+
+document.getElementById('containo').innerHTML+=stox;
+
+
+}
+
+
+}
+
+refresho();
+function getback()
+{
+
+	
+
+//vwp.content=finuu;
+
+/*
+var viewport=document.createElement('meta');
+        viewport.name = "viewport";
+        document.getElementsByTagName('head')[0].appendChild(viewport);
+viewport.setAttribute('content', finuu);
+*/
+var navigo=navigator.userAgent.toLowerCase();
+var chromo=false;
+if(navigo.indexOf("android")>-1)
+if(navigo.indexOf("firefox")==-1)
+chromo=true;
+
+if((chromo)||(navigo.indexOf("indows pho")>-1))
+{
+try
+{
+if(window.visualViewport.scale>1)
+{
+//
+var goBack = window.open('', 'parent');
+	goBack.focus();
+var vwp=document.getElementById('viewport');
+var finuu="width=device-width, initial-scale=0";
+vwp.setAttribute('content', finuu);
+
+window.location.hash = "NEW";
+location.reload();
+	
+	
+	
+//self.close();
+}
+else
+	{
+		//document.body.innerHTML="";
+		
+		var goBack = window.open('', 'parent');
+	goBack.focus();
+	
+}
+}
+catch(sff){self.close();}
+}
+else
+{
+	
+	self.close();
+//var goBack = window.open('', 'parent');
+	//goBack.focus();
+}
+
+}
+
+
+
+function showu()
+{
+document.getElementById('voto').style.display="inline";	
+	
+}
+function votus(note)
+{
+	for (i=0; i<11; i++)
+	{
+if(i==note)
+{
+	var yyk=document.getElementById("voti"+i);
+	//yyk.style.top="15px";
+	yyk.style.transition="transform 330ms ease-in-out";
+	yyk.style.transform="scale(1.8)";
+	yyk.style.fontWeight="bold";
+	setTimeout("byevote()",1500);
+	
+	//parent.postMessage("FFFFFFf", "*");
+	
+	window.opener.postMessage("77577"+s4+(10+i), "*");
+	yyk.onmousedown=function(){self.close();}
+}
+else
+document.getElementById("voti"+i).style.display="none";
+}	
+}
+function byevote()
+{
+document.getElementById("containo").style.display="none";	
+	
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+
+        </body>
+   </html>
+
+
+
