@@ -1,0 +1,122 @@
+.fixedsy {font-family:cocofix,Lucida Console;color:000000;font-size:16px}
+
+sub, sup {vertical-align : baseline;position : relative;}
+sup {top : -0.5em;}
+sub {bottom : -0.25em;}
+img.mido{vertical-align:baseline;position:relative;bottom:-0.5em;}
+.pixelated {
+  image-rendering:optimizeSpeed;
+  image-rendering:-moz-crisp-edges;
+  image-rendering:-webkit-optimize-contrast;
+  image-rendering:optimize-contrast;
+  image-rendering:crisp-edges;
+  image-rendering:pixelated;
+}
+.und:hover {
+text-decoration: underline;
+}
+
+.blanco:hover {
+background-color: #fff;
+}
+
+
+@media (min-width: 600px) {
+
+::-webkit-scrollbar {
+  width: 17px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eee; 
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #ccc; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a5a5a5; 
+}
+
+}
+
+
+.imageContainer {
+  visibility:hidden;
+  width: 380px;
+  height: 500px;
+  
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #bb44cc;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageContainer > img {
+  display: block;
+  max-width:100%;
+  max-height:100%;  
+  touch-action: none;
+  
+}
+
+
+@font-face {
+    font-family: 'cocofix';
+    src: url('cocofix3.eot');
+    src: url('cocofix3.eot?#iefix') format('embedded-opentype'),url('cocofix4.woff2') format('woff2'),url('cocofix4.woff') format('woff');
+}
+
+
+.key {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #F9F9FA), color-stop(50%, #ECEDEE), color-stop(100%, #DDDFE1));
+  background-color: #ECEDEE;
+  -webkit-box-shadow: #333 0px 1px 0px 0px;
+  height: 35px;
+  line-height: 30px;
+  font-size: 23px;
+  border-radius: 4px;
+  
+  
+  text-align: center;
+  display: inline-block;
+  
+  font-family: Helvetica;
+  font-weight: 400;  
+}
+
+.system_key {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #a0a8b3), color-stop(50%, #88919D), color-stop(100%, #717A87));
+  background-color: #68717D;
+  //color: #FFF;
+  //border: 1px solid #515A67;
+ 
+}
+.dav {
+  border: 1px solid rgba(255,255,255,.1);
+  width: 150px;
+  height: 150px;
+  transform: rotate(45deg);
+  margin: 31px;
+  float: left;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%,rgba(0,0,0,0.05) 100%); 
+}
+
+.c4
+{
+	color:#000080;
+}
+.c5
+{
+	color:#990099;
+}
