@@ -1,0 +1,729 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="cache-Control" content="no-cache, must-revalidate">
+		<meta name="google" value="notranslate">
+		<meta name="viewport" id="viewport" content="width=480, minimal-ui" />
+		<meta http-equiv="Expires" content="Mon, 26 Jul 1997 05:00:00 GMT">
+		<title>Webcam</title>
+		<style>
+
+html
+{
+	font-size:16px;
+}
+			.pixelated {
+				image-rendering:optimizeSpeed;
+				image-rendering:-moz-crisp-edges;
+				image-rendering:-webkit-optimize-contrast;
+				image-rendering:optimize-contrast;
+				image-rendering:crisp-edges;
+				image-rendering:pixelated;
+			}
+			
+			@media only screen and (min-width: 500px) {
+  .fonto
+  {
+    font-size:14px;
+  }
+}
+
+		</style>
+		<script>
+var mydom=window.location.hostname;
+mydom = mydom.replace('www.','');
+			document.domain=mydom;
+
+			var listo=new Array();
+			var nbcam=0;
+			var activo=0;
+			var nix="";
+			var camid="";
+			var hdx=0;
+			var dest;
+			var deb=0;
+			var servil;
+			var chrome60=false;
+			var agento=navigator.userAgent.toLowerCase();
+			var secu="0";
+			var inside=false;
+			var grando=true;
+			var myavat,mycrypt;
+			var modal=0;
+			var x0,y0;
+var mobilo=false;
+
+
+function isMobileDevice() {
+  // Check if the user agent contains keywords commonly used in mobile devices
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+
+function iOSversion() {
+  if (/iP(hone|od|ad)/.test(navigator.platform)) {
+    
+    var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+    var kelios=parseInt(v[1], 10);
+    if(kelios<12)
+    alert("mettez a jour votre version d'IOS qui est trop ancien");
+    return (kelios);
+  }
+}
+
+var verso=iOSversion();
+
+if(isMobileDevice())
+mobilo=true
+
+
+			function agir(txt1)
+			{
+				var headTag = document.getElementsByTagName("head").item(0);
+				var scriptTag = document.createElement("script");
+
+				scriptTag.src="https://cloud2.coco.gg/"+txt1;
+
+				headTag.appendChild( scriptTag);
+			}
+		</script>
+	</head>
+	<body class='fonto' style="margin:0;padding:5px;position:absolute;font-family:verdana;overflow:hidden;background-color:#ffffff;">
+
+
+		<div id="infum" style="position:absolute;top:15px;left:500px;"></div>
+		
+		
+		
+
+
+
+		<div id=selecto>
+
+
+
+
+			<br>
+
+			<script>
+				var coe8,co9,coe10;
+
+				var s8   = document.location;
+				var s0=""+s8;
+				var vito=300;
+				
+
+				var stocka="";
+				var hd=0;
+
+				var vitomax=300;
+
+				var streamer;
+
+
+				if(s0.indexOf("https")==0)
+				chrome60=true;
+				var cameron=false;
+				var publico=false;
+				var tofla="";
+
+				var xo,yo;
+
+
+
+				tofla=s0.substring(s0.lastIndexOf('#')+1);
+
+				servil=tofla.substring(40,41);
+				servil=0;
+				var virgulo=tofla.indexOf(",");
+
+				nix=tofla.substring(7,19);
+				myavat=tofla.substring(19,28);
+				mycrypt=tofla.substring(28,40);
+				dest=tofla.substring(41,virgulo);
+				camid=tofla.substring(1,7);
+
+				var speedo=parseInt(tofla.substring(virgulo+1));
+
+				var speco=tofla.substring(0,1);
+				if(speco=="X")
+				{
+					inside=true;
+				}
+
+
+				try
+				{
+					history.replaceState(null, null, ' ');
+				}
+				catch (ew){}
+
+
+
+
+
+
+				//if(speedo<100)
+				if(!mobilo)
+				document.write("<div onclick=acticam(6); style='cursor:pointer;'><b>mini Cam</b><br>(faible debit)</div><br><br>");
+				
+				if(!mobilo)
+				document.write("<div onclick=acticam(4); style='cursor:pointer;'><b>Cam HD</b><br>(debit moyen)</div>");
+				
+				
+			</script>
+			
+			<br><br><div style='font-size:13px;'>N'oubliez pas de couper votre cam sur Skype ou ailleurs</div>
+
+			<br>
+
+
+			<div onclick=acticam(3); style="cursor:pointer;"><b>Cam ultra HD</b><br>(haut debit requis)</div>
+
+			<br>
+			<br>
+			<script>
+				//if(speedo>99)
+				//document.write("<div onclick=acticam(5); style='cursor:pointer;color:880088;'><b>Cam mega Wide</b><br>(Premium requis)</div>");
+
+				document.getElementById("infum").innerHTML=speedo;
+			</script>
+
+
+		</div>
+
+
+
+		<script>
+
+
+
+
+
+			window.addEventListener("message", function(event)
+			{
+
+				var frum=""+event.data;
+
+				if(frum.indexOf("camsig")>-1)
+				camsig(frum.substring(6));
+			});
+
+
+
+
+			function demaro(stro)
+			{
+
+				if(!cameron)
+				{
+					pollo();
+					cameron=true;
+
+				}
+			}
+
+
+			function pollo()
+			{
+				var ccc="62";
+				if(dest<999)
+				ccc="63";
+				fff=dest;
+				if(deb>0)
+				fff="";
+				deb++;
+
+
+
+				/*
+				if(chrome60)
+				{
+
+
+				//
+				if(inside)
+				parent.postMessage(""+ccc+hdx+servil+camid+fff, "*");
+				else
+				window.opener.postMessage(""+ccc+hdx+servil+camid+fff, "*");
+
+				}
+				else
+				*/
+				agir(ccc+nix+hdx+servil+camid+fff);
+
+
+				setTimeout("pollo()",4000);
+			}
+
+
+			function stopi(stroki)
+			{
+
+
+				alert('stttopp');
+				cameron=false;
+
+			}
+
+			function camsig(textal)
+			{
+
+				try{
+					streamer.uploadCurrentFrame("https://php.coco.gg/warning/newget.php?name="+textal+".jpg", "image/jpeg", 0.8);
+
+				}
+				catch (ew){alert("probl "+ew);}
+
+			}
+
+			function process1(qqq)
+			{
+
+				if(qqq.indexOf("777")>0)
+				{
+					if(qqq.indexOf("777")<3)
+					camsig(qqq.substring(5));
+				}
+
+			}
+
+
+
+
+			function acticam(jjk)
+			{
+				document.getElementById("selecto").style.display="none";
+				document.getElementById("wrapo").style.display="inline";
+
+				var w=window,d=document,e=d.documentElement,g=d.getElementsByTagName('body')[0],x=w.innerWidth||e.clientWidth||g.clientWidth,y=w.innerHeight||e.clientHeight||g.clientHeight;
+				xo=x;
+				yo=y;
+
+
+
+
+				//hdx=jjk-2;
+				hdx=0;
+				if(jjk==6)
+				{
+					mywid=240;
+					myhei=240;
+					hdx=0;
+					vito=150;
+					servil=5;
+				}
+
+
+				if(jjk==4)
+				{
+					mywid=320;
+					myhei=320;
+					hdx=0;
+
+
+				}
+				if(jjk==3)
+				{
+					mywid=480;
+					myhei=480;
+					vito=480;
+					hdx=1;
+				}
+
+				if(jjk==5)
+				{
+					mywid=480;
+					myhei=480;
+					vito=800;
+					hdx=3;
+				}
+
+				/*
+				if(vito>vitomax)
+				vito=vitomax;
+				*/
+
+				
+
+
+
+
+				var loca=""+location;
+				var streamid="abcdef";
+
+				var kelc=1;
+
+				var url1="wss://vid4.coco.gg/"+camid;
+				
+				/*
+				if(camid.charCodeAt(0)<59)
+				{
+					url1="wss://vid2.coco.gg/"+camid;
+					
+					if((camid.charCodeAt(5))%2==1)
+					url1="wss://vid6.coco.gg/"+camid;
+					
+				}
+				*/
+				//var url1="wss://streamo.coco.gg/222"+kelc+nix+myavat+mycrypt+camid;
+
+				//if(agento.indexOf("iphone")==-1)
+				//alert(Streamer.browser.isIOS13())
+
+
+
+
+
+				streamer = new Streamer({
+					video: document.getElementById('video-viewport'),
+					full_server_url: url1,
+					size: {width: mywid, height: myhei},
+				});
+
+
+
+				if(inside)
+				{
+					var vida=document.getElementById("wrapo").style;
+					vida.width="300px";
+					vida.height="300px";
+
+					var vww=document.getElementById("video-viewport");
+
+					vww.style.width="100%";
+
+
+				}
+
+				//magicOutputArgs: ["-q","8"],
+				//magicOutputArgs: ["-b:v",vito+"k"],
+
+				/*
+				streamer.onstart = function() {
+				demaro("eee");
+				if(inside)
+				document.getElementById("camz").style.display="inline";
+				if((nbcam>1)&&(!inside))
+				{
+				listodevice.style.display="inline";
+				listodevice.style.left=(mywid+30)+"px";
+				}
+				};
+				*/
+
+				/*
+				var listodevice = document.getElementById("devices");
+
+				if(!inside)
+				devices.addEventListener('change', function()
+				{
+				streamer.changeDevice(this.value);
+				});
+
+				*/
+
+				var $devices = document.getElementById("devices");
+				streamer.onstart = function() {
+					demaro("eee");
+					sendus("demaro");
+					if(inside)
+					document.getElementById("camz").style.display="inline";
+					if((nbcam>1)&&(!inside))
+					{
+						$devices.style.display="inline";
+						//$devices.style.left=(mywid+30)+"px";
+					}
+				};
+
+
+				streamer.onconsent = function() {
+					streamer.videoDevices().then((devices) => {
+						var hasCurrent = devices.filter(device => device.active).length;
+						var empty = hasCurrent ? '' : '<option selected></option>';
+						$devices.innerHTML = empty + devices.map((device, i) => {
+							listo[nbcam]=device.deviceId;
+							if(device.active)
+							activo=nbcam;
+							nbcam++;
+							var name = device.label || ("Camera #" + i);
+							var selected = device.active ? ' selected' : '';
+							return '<option value="' + device.deviceId + '"' + selected + '>' + name + '</option>';
+						}).join("");
+					});
+				};
+				streamer.onwebsocketconnected = function() {
+					console.log("Websocket connected");
+				};
+				streamer.onspecialcode = function(command) {
+					console.log('got a special command', command);
+					if(command.command == "upload") {
+						streamer.uploadCurrentFrame(command.url, command.type, command.quality);
+					}
+				};
+
+				streamer.onresize = function(params) {
+					console.log('onresize', params);
+
+					const actualo=params.actual;
+
+					if(actualo)
+					{
+
+
+						x0=actualo.width;
+						y0=actualo.height;
+
+						if(inside)
+						{
+							if(x0>y0)
+							{
+								var coe4=Math.floor(x0*300/y0);
+								coe8=Math.floor((300-x0*150/y0)/2);
+								coe9=Math.floor((90-x0*45/y0)/2);
+								coe10=Math.floor((120-x0*60/y0)/2);
+								//document.getElementById("video-viewport").style.height="380px";
+
+								document.getElementById("video-viewport").style.left=-coe8+"px";
+
+
+							}
+							if(x0<y0)
+							{
+
+								var coe4=Math.floor(y0*300/x0);
+								coe8=Math.floor((300-y0*150/x0)/2);
+								coe9=Math.floor((90-y0*45/x0)/2);
+								coe10=Math.floor((120-y0*60/x0)/2);
+								//document.getElementById("video-viewport").style.width=coe4+"px";
+
+
+								document.getElementById("video-viewport").style.top=-coe8+"px";
+
+							}
+						}
+						else
+							{
+								
+				window.resizeBy(x0+10-xo,y0+80-yo);
+				document.getElementById("devices").style.top=(y0+20)+"px";
+				
+								
+							}
+
+					}
+				}
+
+				$devices.addEventListener('change', function() {
+					//alert("CHHHEEN");
+					streamer.changeDevice(this.value);
+				});
+
+				streamer.start().catch((error) => {
+					var errur=error.toString();
+					//render_error(errur);
+					console.error(error);
+					if(errur.indexOf("llowed")>-1)
+					{
+						
+					if(inside)	
+					parent.postMessage("notallow", "*");
+					else
+					render_error(errur);
+					}
+				});
+
+
+
+
+
+
+				window.onbeforeunload = function() {
+					
+					sendus("finito");
+					streamer.stop();
+					//return 'Are you sure you want to leave?';
+				}
+
+
+
+
+
+			}
+
+
+			function closa()
+			{
+
+				try
+				{
+					sendus("finito");
+				}
+				catch(pmk){}
+				parent.postMessage("closecam", "*");
+
+			}
+
+
+
+			function toggle()
+			{
+				//alert("toggle");
+				if(inside)
+				{
+var papa=parent.document.getElementById("streamup");
+					if(modal==0)
+					{
+
+
+						document.getElementById("croiz").style.display="none";
+						document.getElementById("camz").style.display="none";
+						var vida=document.getElementById("wrapo").style;
+						vida.width="90px";
+						vida.height="90px";
+						if(x0==y0)
+							{}
+						else if(x0<y0)
+						document.getElementById("video-viewport").style.top=-coe9+"px";
+						else
+						document.getElementById("video-viewport").style.left=-coe9+"px";
+						papa.style.width="90px";
+						papa.style.height="90px";
+papa.style.left=parent.mov2x;
+papa.style.top=parent.mov2y;
+
+
+						modal=1;
+					}
+					else if(modal==1)
+						{
+
+							document.getElementById("croiz").style.display="none";
+							document.getElementById("camz").style.display="none";
+							var vida=document.getElementById("wrapo").style;
+							vida.width="120px";
+							vida.height="120px";
+							if(x0==y0)
+							{}
+							else if(x0<y0)
+						document.getElementById("video-viewport").style.top=-coe10+"px";
+						else
+						document.getElementById("video-viewport").style.left=-coe10+"px";
+							papa.style.width="120px";
+							papa.style.height="120px";
+papa.style.left=parent.mov2x;
+papa.style.top=parent.mov2y;
+
+
+
+							modal=2;
+						}
+						else if(modal==2)
+							{
+								
+								papa.style.width="340px";
+								papa.style.height="300px";
+papa.style.left=0;
+papa.style.top=0;
+
+
+
+								document.getElementById("croiz").style.display="inline";
+								document.getElementById("camz").style.display="inline";
+
+
+								var vida=document.getElementById("wrapo").style;
+								
+								vida.width="300px";
+								vida.height="300px";
+								vida.display="block";
+								if(x0==y0)
+							{}
+								else if(x0<y0)
+						document.getElementById("video-viewport").style.top=-coe8+"px";
+						else
+						document.getElementById("video-viewport").style.left=-coe8+"px";
+								
+
+								modal=0;
+							}
+
+						}
+
+					}
+
+
+					function reverse()
+					{
+						//alert(activo+ "  "+nbcam);
+						activo=(activo+1)%nbcam;
+
+
+						streamer.changeDevice(listo[activo]);
+
+					}
+					function sendus(zdz)
+					{
+						streamer.emitSpecialCode(zdz);
+
+					}
+
+				</script>
+
+
+				
+
+				<div id=pub style="position:absolute;top:0;left:310;">
+
+
+
+				</div>
+
+				<img id="croiz" class="pixelated" src=croiz.gif onclick=closa(); style="position:absolute;width:63px;height:63px;left:280px;top:0;z-index:40;display:none;">
+
+				<img id="camz" class="pixelated" src=camz.gif onclick=reverse(); style="position:absolute;width:63px;height:63px;left:280px;top:200px;z-index:40;display:none;">
+
+
+
+				<div id=wrapo style="position:absolute;top:0;left:0;display:none;">
+					<video id="video-viewport" style="position:absolute;" autoplay="autoplay" playsinline="" onclick=toggle()></video>
+				</div>
+
+				<select id="devices" style="position:absolute;left:200px;top:50px;display:none;">
+					<option>Loading...</option>
+				</select>
+
+
+
+				<script src="./streamer.js"></script>
+
+				<script>
+
+
+					function render_error(error) {
+						const p = document.createElement("p");
+						p.classList.add("error");
+						p.innerHTML = error;
+						document.body.insertBefore(p, document.body.firstChild);
+					}
+
+					if(inside)
+					{
+						document.getElementById("croiz").style.display="inline";
+
+
+						document.getElementById("pub").style.display="none";
+						document.getElementById("infum").style.display="none";
+					}
+
+
+
+				</script>
+
+
+			</body>
+		</html>

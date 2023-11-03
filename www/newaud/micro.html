@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    	
+    	<meta name="viewport" id="viewport" content="width=200, minimal-ui" />
+        <title>Stream Client</title>
+        <style type="text/css">
+         html, body {
+             background-color: #999;
+             position:absolute;
+         }
+         
+         .error {
+           color: red;
+         }
+        </style>
+    </head>
+    <body>
+        <div >
+            <video id="video-viewport" width="50" height="20" autoplay playsinline controls style="position:absolute;top:0;left:0"></video>
+        </div>
+        
+         <button id=playo style="position:absolute;left:6px;font-size:18px;display:none;outline:0;font-family:verdana;width:80px;height:30px;background-color:#5577CC;color:#ffffff;border-radius:7px;" >Play&nbsp;<b>&#9654;</b></button>
+    
+        <script src="./watcher.js"></script>
+        <script>
+        	
+        	
+        	 var streamid="abcdef";
+          var loca=""+location;
+          var indo=loca.indexOf("?");
+          var whatslot=0;
+         if(indo>-1)
+         {
+         streamid=loca.substring(indo+1);
+         if(streamid.indexOf("--")>-1)
+         whatslot=parseInt(streamid.substring(5,6))+1;
+  
+         }
+         var proto="ws";
+if((""+location).indexOf("https")>-1)
+proto="wss";
+         
+         
+         var url1=proto+"://live.zix.net/555"+streamid;
+					
+					var buffiz=512;
+					var ua = navigator.userAgent.toLowerCase();
+					var ismob = ua.indexOf("android") > -1;
+					var maxque=12;
+					var fering=1;
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+         function render_error(error) {
+             const p = document.createElement("p");
+             p.classList.add("error");
+             p.innerHTML = error;
+             document.body.insertBefore(p, document.body.firstChild);
+         }
+         var proto = location.protocol === 'https:' ? 'wss://' : 'ws://';
+         var server = proto + document.location.hostname;
+         var $video = document.getElementById('video-viewport');
+         var url1="wss://mic.coco.gg/xkxk"+streamid+"/1";
+         var watcher = new Watcher({
+             video: $video,
+             full_server_url: url1,
+         });
+         watcher.onwebsocketconnected = function() {
+             console.log("Websocket connected");
+         };
+         watcher.onspecialcode = function(command) {
+             console.log('got a special command', command);
+         };
+         watcher.onresize = function(params) {}
+         watcher.start().catch((error) => {
+           render_error(error.toString());
+           console.error(error);
+         });
+         
+         watcher.onuserplay = function(callback) {
+const playButton = document.getElementById("playo");
+playButton.innerHTML = 'Play';
+playButton.style.display = "inline";
+playButton.addEventListener('click', function() {
+playButton.innerHTML = 'Playing';
+playButton.style.display = "none";
+callback();
+});
+
+}
+         
+        </script>
+    </body>
+</html>

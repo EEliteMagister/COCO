@@ -1,0 +1,154 @@
+
+<html>
+<head>
+
+<meta http-equiv="Pragma" content="no-cache"> 
+<meta http-equiv="cache-Control" content="no-cache, must-revalidate"> 
+<meta http-equiv="Expires" content="Mon, 26 Jul 1997 05:00:00 GMT"> 
+<META NAME="robots" CONTENT="noindex">
+<meta name="viewport" id="viewport" content="width=380, minimal-ui" />
+<title>PAIEMENT</title>
+
+<script LANGUAGE="JavaScript">
+
+
+var s8   = location;
+var s0=""+s8;
+
+var montant=1100;
+var uhg=s0.indexOf('?');
+var uhh=s0.indexOf('#');
+
+var itemo=s0.substring(uhg+1,uhg+10);
+
+var plaintid=s0.substring(uhg+11,uhg+20);
+var plaintcomp=s0.substring(uhg+20);
+
+plaintcomp=plaintcomp.replace("%20"," ");
+
+var intero=plaintcomp.indexOf("???")
+
+var kkip=plaintcomp.substring(0,plaintcomp.indexOf("!!!"));
+var kkplace=plaintcomp.substring(plaintcomp.indexOf("!!!")+3,plaintcomp.indexOf("---"));
+var kkdate=plaintcomp.substring(plaintcomp.indexOf("---")+3,intero);
+var kktel="";
+
+var lastinfo=intero;
+
+var dolix=plaintcomp.indexOf("$$$",intero);
+if(dolix>0)
+{
+kktel=plaintcomp.substring(intero+3,dolix);
+lastinfo=dolix;
+}
+var accolade=plaintcomp.indexOf("{{{",intero);
+if(accolade>0)
+{
+montant=plaintcomp.substring(lastinfo+3,accolade);
+if(montant==600)
+montant=1100;
+}
+
+</script>
+
+</head>
+<body BGCOLOR=cccccc SCROLL=AUTO style='font-family:verdana;font-size:14px;margin:5px;'>
+
+
+
+
+
+<div style="position:relative;top:20px;left:0px;width:560px;">
+
+
+Vous avez été exclu
+<br>
+<br>
+suite à un signalement d’un utilisateur et au travail de la modération, vous n' avez pas respecté pas nos conditions générales d’utilisation du site.
+<br>
+<br>
+Vous pouvez réintégrer le service en cliquant sur le bouton ci-dessous.
+<br>
+Si un non-respect de nos conditions d’utilisation venait à nouveau à être constaté vous serez exclu définitivement.
+<br>
+
+<br>
+les échanges sont conservés et seront communiqués en cas de signalement judiciaire.
+
+<br>
+<br>
+
+</div>
+
+
+<div id="boutona" style="position:relative;top:0px;left:100px;">
+
+</div>
+
+<div id="infa" style="position:relative;font-size:12px;top:100px;left:0px;">
+
+</div>
+
+<script LANGUAGE="JavaScript">
+var stocka="";
+
+
+var refiz="gggg";
+stocka+="<form action='https://pay.coco.gg/paypage.php' method='post' id=formus class='payline-form' style='font-size:11px;'>";
+
+stocka+="<input type='submit' VALUE='annulation "+(montant/100)+"€ >>' onmouseover=this.style.color='000000'; onmouseout=this.style.color='ffffff'; style='position:relative;top:40px;left:90px;border-width:1px;width:160px;height:50px;font-family:verdana;font-size:14px;font-weight:bold;border-color:000000;background-color:67a54b;color:ffffff;border-style:solid;cursor:pointer;'>";
+
+stocka+="<input type='hidden' name='paymentAmount' id='paymentAmount' value='"+montant+"' >";
+
+stocka+="<input type='hidden' name='orderRef' id='orderRef' value="+itemo+"-"+Math.floor(Math.random()*100000)+" >";
+
+
+
+var lecontrat="2407913";
+if(montant>2100)
+lecontrat="2407021";
+
+stocka+="<input type='hidden' name='selectedContract' id='selectedContract' value='"+lecontrat+"' >";
+
+
+
+stocka+="<input type='hidden' name='orderAmount' id='orderAmount' value='"+montant+"' >";
+
+
+stocka+="<input type='hidden' name='languageCode' id='languageCode' value='fre/fra' >";
+
+
+stocka+="<input type='hidden' name='currency' id='currency' value='978'>";
+
+
+stocka+="<input type='hidden' name='notificationURL' id='notificationURL' value='http://php.coco.fr/payline/examples/web/token.php' >";
+
+stocka+="<input type='hidden' name='privateDataKey1' id='privateDataKey1' value='"+itemo+"'>";
+
+stocka+="<input type='hidden' name='privateDataValue1' id='privateDataValue1' value='"+itemo+"'>";
+stocka+="<input type='hidden' name='requa' id='requa' value='"+montant+"*b@c;' >";
+
+stocka+="<input type='hidden' name='customPaymentPageCode' id='customPaymentPageCode' value='UfdMOEUnqWgKrwEzfUGN'>";
+
+
+document.getElementById("boutona").innerHTML=stocka;
+
+var stox="";
+stox+="ref n°: "+plaintid;
+stox+="<br>";
+stox+="<br>IP : "+kkip;
+stox+="<br>repartiteur : "+kkplace;
+stox+="<br>capture fichiers images et texte : "+kkdate;
+stox+="<br>"+kktel;
+document.getElementById("infa").innerHTML=stox;
+
+if(uhh>-1)
+top.location=s0.substring(0,uhh+1);
+
+</script>
+
+
+
+
+</body>
+</html>
