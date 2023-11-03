@@ -1,2 +1,8 @@
 # COCO WEB CLIENT
-web client coco chat (coco.fr - coco.gg - tchat.net)
+web client coco chat 
+cocoland.fr
+coco.fr
+intocam.com
+tchat.net
+coco.mg
+coco.gg
