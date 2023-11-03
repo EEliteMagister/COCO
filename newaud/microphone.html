@@ -1,0 +1,537 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    	
+<style>
+	
+	.pixelated {
+  image-rendering:optimizeSpeed;
+  image-rendering:-moz-crisp-edges;
+  image-rendering:-webkit-optimize-contrast;
+  image-rendering:optimize-contrast;
+  image-rendering:crisp-edges;
+  image-rendering:pixelated;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: #87c540;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #87c540;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+</style>
+	    	
+    	
+    	<script>
+    		
+ var nix="";
+var camid="";
+var hdx=0;
+var dest;
+var deb=0;
+var servil;
+var chrome60=false;
+var agento=navigator.userAgent.toLowerCase();
+var secu="0";
+var inside=false;
+var grando=true;
+var myavat,mycrypt;
+var maxivol=0;
+var primo=true;
+
+var voxsamp=new Array("5","5","5","5");   		     
+         
+                 
+         var s8   = document.location;
+var s0=""+s8;
+var vito=300;
+
+var stocka="";
+var hd=0;
+
+var vitomax=300;
+
+var streamer=null;
+
+
+if(s0.indexOf("https")==0)
+chrome60=true;
+var cameron=false;
+var publico=false;
+var tofla="";
+
+var xo,yo;
+var rooma=4;
+var mysalon=999;
+
+var primaa=true;
+tofla=s0.substring(s0.lastIndexOf('#')+1);
+
+window.addEventListener('message',function(event) {
+	
+	var frum=""+event.data;
+	
+	var gan=parseInt(frum);
+	gan=Math.floor(gan*(1+gan/99));
+	if(primaa)
+	{
+		streamer.setVolume(gan);
+		//primaa=false;
+}
+	document.getElementById("gaino").innerHTML=frum;
+},false);
+
+
+
+servil=tofla.substring(40,41);
+var virgulo=tofla.indexOf(",");
+
+nix=tofla.substring(7,19);
+myavat=tofla.substring(19,28);
+mycrypt=tofla.substring(28,40);
+dest=tofla.substring(41,virgulo);
+camid=tofla.substring(1,7);
+var multiv=false;
+
+var mode=0;
+
+var speedo=parseInt(tofla.substring(virgulo+1));
+
+var ffox=false;
+
+var speco=tofla.substring(0,1);
+
+var gaina=true;
+var echoa=true;
+var cancela=true;
+
+
+function getChromeVersion () {     
+    var raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
+
+    return raw ? parseInt(raw[2], 10) : false;
+}
+
+
+if(agento.indexOf(" sm-")>-1)
+if(agento.indexOf("sungbrow")==-1)
+if(getChromeVersion()>111)
+{
+	
+	gaina=true;
+	echoa=true;
+	cancela=true;
+	
+}
+
+/*
+try
+{
+history.replaceState(null, null, ' ');
+}
+catch (ew){}
+  */       
+    		
+    		
+    		
+    		
+    		
+    		
+    		
+    		
+    		
+    		
+    		
+    		
+    		</script>
+    	
+    	
+    	
+    	
+    	
+        <title>Streamer</title>
+        <style>
+         
+         .error {
+             color: red;
+         }
+        </style>
+    </head>
+    <body style="overflow:hidden;background-color:#dddddd;margin:0;">
+  <div id="tout" style="position:absolute;overflow:hidden;">
+        <div >
+            <video id="video-viewport" autoplay playsinline></video>
+        </div>
+         
+            <select id="devices" style="postion:absolute;top:192px;left:4px;">
+                <option>Loading...</option>
+            </select>
+               
+        <div id=gaino style="position:absolute;top:208px;left:45px;"></div>
+        <div id=volumo style="position:absolute;top:5px;left:5px;"></div>
+        <div id=showy style="position:absolute;top:5px;left:50px;"></div></p>
+        	
+<label id=labelo style="position:absolute;top:120px;left:30px;display:none;" class="switch">
+  <input id=echoa onclick=echochange(); type="checkbox" checked>
+  <span class="slider round"></span>
+  <div style="position:absolute;top:-3px;left:62px;">suppress.<br>echo</div>
+</label>
+        
+        
+        <img id="croiz" class="pixelated" src=croiz.gif onclick=closa(); style="position:absolute;width:63px;height:63px;left:80px;top:0;z-index:40;display:none;">
+<img id="micz" class="pixelated" src=micz.gif onclick=apparo(); style="position:absolute;width:24px;height:24px;left:0px;top:0px;z-index:40;display:none;">
+     
+     
+    </div>   
+        
+        <script src="./streamer.js?ver=655"></script>
+        <script>
+         
+         
+  for(i=0; i<20; i++)
+        {
+        	colo="88ff88"; 	
+        	if(i>15)
+        	colo="ffcc66";
+        	if(i==19)
+        	colo="ff4444";
+        	var numi="bar"+i;
+        	volumo.innerHTML +="<div id='"+numi+"' style='position:absolute;left:0;top:"+(145-i*7)+"px;background-color:#"+colo+";width:20px;height:4px;'>";
+        
+        }       
+         
+         
+
+if(speco.toLowerCase()=="x")
+{
+	
+	
+inside=true;
+
+document.getElementById("croiz").style.display="inline";
+
+
+
+if(speco=="X")
+speco="R";
+}
+
+
+
+if(speco=="R")
+{
+rooma=8;
+mysalon=tofla.substring(virgulo-3,virgulo);
+if(tofla.substring(virgulo+1,virgulo+2)==1)
+{
+	multiv=true;
+	document.getElementById('labelo').style.display="inline";
+}
+
+//alert(camid);
+document.title="Mic room";
+}
+         
+         
+         
+         
+         
+         
+         function render_error(error) {
+             const p = document.createElement("p");
+             p.classList.add("error");
+             p.innerHTML = error;
+             document.body.insertBefore(p, document.body.firstChild);
+             if(inside)	
+					parent.postMessage("notallow", "*");
+         }
+         var proto = location.protocol === 'https:' ? 'wss://' : 'ws://';
+         var server = "wss://mic.coco.gg/";
+         var $video = document.getElementById('video-viewport');
+         
+         
+         
+         var url1=server+"xkxk"+camid+"/1?role=streamer";
+         if(rooma==8)
+         url1=server+"salon"+mysalon+"/1?role=streamer";
+         
+         
+         
+         
+        
+         streamer = new Streamer({
+             full_server_url: url1,
+             streamId: camid,
+             rawConstraints: {
+								echoCancellation: echoa,
+								noiseSuppression: cancela,
+								autoGainControl: gaina,
+								}
+             
+         });
+         var $devices = document.getElementById("devices");
+         streamer.onstart = function() {
+             console.log("Streaming was started");
+             
+             
+             if(primo)
+             {
+             primo=false;
+             
+             if(inside)
+             {
+             apparo();
+             
+             }
+             console.log("debut stream");
+             if(rooma==4)
+             {
+             if(!inside)
+             window.opener.postMessage("newmic","*");
+             else
+             parent.postMessage("newmic","*");
+             }
+             else
+             pollo();
+             
+             setInterval(renderCurrentVolume, 100);
+             }
+             
+             
+             
+         };
+         streamer.onconsent = function() {
+            streamer.audioDevices().then((devices) => {
+                var hasCurrent = devices.filter(device => device.active).length;
+                var empty = hasCurrent ? '' : '<option selected></option>';
+                $devices.innerHTML = empty + devices.map((device, i) => {
+                    var name = device.label || ("Camera #" + i);
+                    var selected = device.active ? ' selected' : '';
+                    return '<option value="' + device.deviceId + '"' + selected + '>' + name + '</option>';
+                }).join("");
+            });
+         };
+         streamer.onwebsocketconnected = function() {
+             console.log("Websocket connected");
+         };
+         streamer.onspecialcode = function(command) {
+             console.log('got a special command', command);
+             if(command.command == "upload") {
+                 streamer.uploadCurrentFrame(command.url, command.type, command.quality);
+             }
+         };
+         streamer.onresize = function(params) {
+           console.log('onresize', params);
+           const size = Streamer.browser.isMobile() ? params.desired : params.actual
+           if (size) {
+             $video.parentNode.style.width = size.width + "px";
+             $video.parentNode.style.height = size.height + "px";
+           }
+         }
+         streamer.start().catch((error) => {
+           render_error(error.toString());
+           console.error(error);
+         });
+         $devices.addEventListener('change', function() {
+           streamer.changeDevice(this.value);
+         });
+         
+         
+         
+         
+         
+         
+         
+         
+ function disparo()
+{
+
+document.getElementById("croiz").style.display="none";
+document.getElementById("micz").style.display="inline";
+document.getElementById("volumo").style.display="none";
+//parent.postMessage("minimic", "*");
+
+document.getElementById("tout").style.width="24px";
+document.getElementById("tout").style.height="24px";
+
+
+}        
+function apparo()
+{
+parent.postMessage("minimic1", "*");
+document.getElementById("tout").style.width="150px";
+document.getElementById("tout").style.height="230px";
+
+document.getElementById("croiz").style.display="inline";
+document.getElementById("micz").style.display="none";
+document.getElementById("volumo").style.display="inline";
+setTimeout("disparo()",3000);
+}
+
+function closa()
+{
+parent.postMessage("closemic", "*");
+
+}
+
+function echochange()
+{
+var echosuppr=false;
+if(document.getElementById("echoa").checked)
+echosuppr=true;
+
+	
+	
+	streamer.options.rawConstraints = {
+echoCancellation: echosuppr,
+noiseSuppression: true,
+autoGainControl: true,
+};
+streamer.changeDevice(streamer.streamDeviceId)
+	
+
+}
+ 
+function renderCurrentVolume() {
+             
+            
+             voxsamp[0] = Math.floor(streamer.currentVolume())/5;
+             
+             //document.getElementById("showy").innerHTML=voxsamp[0];
+              
+              var max1=voxsamp[0];
+              var max2=voxsamp[1];
+              var maxo=0;
+                           
+              
+              if(max1<max2)
+              {
+              	maxo=max2;
+              	max2=max1;
+              	max1=maxo;
+              }
+              
+              if(voxsamp[2]>max2)
+              {
+              if(voxsamp[2]<max1)
+              max2=voxsamp[2];
+              else
+              {
+              max2=max1;
+              max1=voxsamp[2];
+              }
+              }
+              
+              if(voxsamp[3]>max2)
+              {
+              if(voxsamp[3]<max1)
+              max2=voxsamp[3];
+              else
+              {
+              max2=max1;
+              max1=voxsamp[3];
+              }
+              }
+              
+              max1=(max1+max2)/2;
+              
+              
+            
+             
+             for(i=0; i<20; i++)
+             {
+             	var numi="bar"+i;
+             	maxivol=(max1)*5;
+             	if(max1>i)
+             	document.getElementById(numi).style.visibility="visible";
+             	else
+             	document.getElementById(numi).style.visibility="hidden";
+             }
+             voxsamp[3]=voxsamp[2];
+             voxsamp[2]=voxsamp[1];
+             voxsamp[1]=voxsamp[0];
+             
+             
+         }
+ 
+ function pollo()
+{
+try
+{
+if(maxivol>99)
+maxivol=99;
+if(!inside)
+window.opener.postMessage("micup"+maxivol,"*");
+else
+parent.postMessage("micup"+maxivol,"*");
+
+
+
+maxivol=0;
+}
+catch(wav){
+	self.close();
+	}
+setTimeout("pollo()",300);
+}
+         
+         
+         
+         
+         
+        </script>
+    </body>
+</html>
