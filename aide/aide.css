@@ -1,0 +1,270 @@
+/* CSS Document */
+body
+	{
+		font-size: 12px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		background-color: #a5b1c5; 
+	}
+a:link
+	{
+		color: #000000;
+		text-decoration: none;
+	}
+a:visited
+	{
+		color: #000000;
+		text-decoration: none;
+	}
+a:hover
+	{
+		color: #333333;
+		text-decoration: none;
+	}
+a:active
+	{
+		color: #000000;
+		text-decoration: none;
+	}
+
+.tableau
+	{
+		font-size: 12px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		vertical-align: middle;
+		max-width: 100%;
+		border: 0px;
+	}
+
+/*
+.aide
+	{
+		position: absolute;
+		background-color: #B7C1CC;
+		padding: 8px;
+		left: 38px;
+		top: 10px;
+		width: 300px;
+	}
+*/
+
+.accueil
+	{
+		
+		background-color: #ccd3db;
+		padding: 8px;
+		left: 38px;
+		top: 10px;
+		max-width: 631px;
+	}
+	
+.profil
+	{
+		
+		background-color: #ccd3db;
+		padding: 8px;
+		left: 38px;
+		top: 160px;
+		max-width: 631px;
+	}
+
+.boutons
+	{
+		
+		background-color: #ccd3db;
+		padding: 8px;
+		left: 38px;
+		top: 790px; 
+		max-width: 631px;
+	}
+
+.option0
+	{
+	border-bottom: #000000 1px solid;
+	border-left: #000000 1px solid;
+	border-top:  #000000 1px solid;
+	border-right:  #000000 1px solid;
+	background-color: #dddddd;
+	font-weight: bold;
+	width: 68px;
+	height: 22px;
+	left: 6px;
+	}
+	
+.option1
+	{
+	border-bottom: #000000 1px solid;
+	border-left: #000000 1px solid;
+	border-top:  #000000 1px solid;
+	border-right:  #000000 1px solid;
+	background-color: #d8afca;
+	font-weight: bold;
+	width: 68px;
+	height: 22px;
+	left: 6px;
+	}
+
+.option2
+	{
+	border-bottom: #000000 1px solid;
+	border-left: #000000 1px solid;
+	border-top:  #000000 1px solid;
+	border-right:  #000000 1px solid;
+	background-color: #e0e28f;
+	font-weight: bold;
+	width: 68px;
+	height: 22px;
+	left: 6px;
+	}
+
+.option3
+	{
+	border-bottom: #000000 1px solid;
+	border-left: #000000 1px solid;
+	border-top:  #000000 1px solid;
+	border-right:  #000000 1px solid;
+	background-color: #bbddaa;
+	font-weight: bold;
+	width: 68px;
+	height: 22px;
+	left: 6px;
+	}
+
+.option4
+	{
+	border-bottom: #000000 1px solid;
+	border-left: #000000 1px solid;
+	border-top:  #000000 1px solid;
+	border-right:  #000000 1px solid;
+	background-color: #dddddd;
+	font-weight: bold;
+	width: 68px;
+	height: 22px;
+	left: 6px;
+	}
+
+.option5
+	{
+	border-bottom: #000000 1px solid;
+	border-left: #000000 1px solid;
+	border-top:  #000000 1px solid;
+	border-right:  #000000 1px solid;
+	background-color: #ddccaa;
+	font-weight: bold;
+	width: 68px;
+	height: 22px;
+	left: 6px;
+	}
+
+.option6
+	{
+	border-bottom: #000000 1px solid;
+	border-left: #000000 1px solid;
+	border-top:  #000000 1px solid;
+	border-right:  #000000 1px solid;
+	background-color: #e69e9e;
+	font-weight: bold;
+	width: 68px;
+	height: 22px;
+	left: 6px;
+	}
+
+.option7
+	{
+	border-bottom: #000000 1px solid;
+	border-left: #000000 1px solid;
+	border-top:  #000000 1px solid;
+	border-right:  #000000 1px solid;
+	background-color: #b8bed8;
+	font-weight: bold;
+	width: 68px;
+	height: 22px;
+	left: 6px;
+	}
+
+.option8
+	{
+	border-bottom: #000000 1px solid;
+	border-left: #000000 1px solid;
+	border-top:  #000000 1px solid;
+	border-right:  #000000 1px solid;
+	background-color: #e2b838;
+	font-weight: bold;
+	width: 68px;
+	height: 22px;
+	left: 6px;
+	}
+
+.texteoptions
+	{
+	text-align: center;
+	vertical-align: middle;
+	height: 10px;
+	width: 68px;
+	height: 10px;
+	margin-top: 4px;
+	}
+
+.salons
+	{
+		
+		background-color: #ccd3db;
+		padding: 8px;
+		left: 38px;
+		top: 1280px;
+		max-width: 631px;
+	}
+
+.pv
+	{
+		
+		background-color: #ccd3db;
+		padding: 8px;
+		left: 38px;
+		top: 1555px;
+		max-width: 631px;
+	}
+	
+.amiz
+	{
+		
+		background-color: #ccd3db;
+		padding: 8px;
+		left: 38px;
+		top: 2025px;
+		max-width: 631px;
+	}
+	
+.listeamiz
+	{
+		border-bottom: #000000 1px solid;
+		border-left: #000000 1px solid;
+		border-top:  #000000 1px solid;
+		border-right:  #000000 1px solid;
+		background-color: #e2b838;
+		width: 150px;
+		left: 6px;
+	}
+	
+.amizenligne
+	{
+		color: #000000;
+		font-weight: 600;
+		cursor: default;
+	}
+	
+.amizhorsligne
+	{
+		color: #999999;
+		font-weight: 600;
+		cursor: default;
+	}
+
+.premium
+	{
+		background-color: #ccd3db;
+		padding: 8px;
+		left: 38px;
+		top: 2310px;
+		max-width: 631px;
+	}
+
