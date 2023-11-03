@@ -510,7 +510,7 @@ function tailla() {
 
     stockar += divo("cachslide", cadrx + widx - 18, cadry + 1, 17, widy - 2, colotab[4].substring(1), "z-index:92;display:none;' onmouseenter=ascenceur(1); onmouseout=ascenceur(0);", y);
 
-    stockar += divo("scrall", cadrx + widx - 80, cadry + widy - 80, 48, 48, y, "overflow:hidden;touch-action:none;'", "<img src=scrall.gif?0 TITLE='scrolling' style='position:absolute;left:0;top:0;height:96px;width:48px;touch-action:none;'  onclick='scrallo();' onmouseover=this.style.top=-48px; onmouseout='this.style.top=0'; >");
+    stockar += divo("scrall", cadrx + widx - 80, cadry + widy - 80, 48, 48, y, "overflow:hidden;touch-action:none;'", "<img src=scrall.gif TITLE='scrolling' style='position:absolute;left:0;top:0;height:96px;width:48px;touch-action:none;'  onclick='scrallo();' onmouseover=this.style.top=-48px; onmouseout='this.style.top=0'; >");
 
     //stockar+="</div>"; 
     var lsx = cadrx + 20;
@@ -800,7 +800,7 @@ function tailla() {
 
     closas += divo(y, 187, 108, 24, 24, y, "overflow:hidden;'", "<img src=kill.gif TITLE='bloquer' style='position:absolute;left:0;top:0;" + squa + "'  onclick='killum();' onmouseover=this.style.top=-24; onmouseout=this.style.top=0; >");
 
-    closas += divo(y, 187, 162, 24, 24, y, "overflow:hidden;'", "<img src=ami.gif?1 TITLE='ajouter amiz' style='position:absolute;left:0;top:0;" + squa + "'  onclick='amigo();' onmouseover='this.style.top=-24;' onmouseout='this.style.top=0'; >");
+    closas += divo(y, 187, 162, 24, 24, y, "overflow:hidden;'", "<img src=ami.gif TITLE='ajouter amiz' style='position:absolute;left:0;top:0;" + squa + "'  onclick='amigo();' onmouseover='this.style.top=-24;' onmouseout='this.style.top=0'; >");
 
     closas += divo("blogi", 187, 124, 24, 24, y, "overflow:hidden;'", "");
 
@@ -810,15 +810,15 @@ function tailla() {
 
     closas += divo("closustext", 34, 9, 160, 34, "", "font-family:" + fixpol + ";overflow:hidden'", "");
 
-    closas += divo(y, 187, 82, 24, 24, y, "overflow:hidden;'", "<img src=fleur2.gif?5 TITLE='faire un cadeau' style='position:absolute;left:0;top:0;" + squa + "'  onclick=cadolo(); onmouseover=this.style.top=-24; onmouseout='this.style.top=0'; >");
+    closas += divo(y, 187, 82, 24, 24, y, "overflow:hidden;'", "<img src=fleur2.gif TITLE='faire un cadeau' style='position:absolute;left:0;top:0;" + squa + "'  onclick=cadolo(); onmouseover=this.style.top=-24; onmouseout='this.style.top=0'; >");
 
     //closas+=divo(y,158,64,24,24,y,"overflow:hidden;'","<img src=tele.gif TITLE='appeler' style='position:absolute;left:0;top:0;"+squa+"'  onclick=neutel(0); onmouseover=this.style.top=-24; onmouseout='this.style.top=0'; >");
 
-    closas += divo(y, 187, 188, 24, 24, y, "overflow:hidden;'", "<img src=questor.gif?2 TITLE='info' style='position:absolute;left:0;top:0;" + squa + "'  onmousedown=infuz(event); onmouseover=this.style.top=-24; onmouseout='this.style.top=0'; >");
+    closas += divo(y, 187, 188, 24, 24, y, "overflow:hidden;'", "<img src=questor.gif TITLE='info' style='position:absolute;left:0;top:0;" + squa + "'  onmousedown=infuz(event); onmouseover=this.style.top=-24; onmouseout='this.style.top=0'; >");
 
-    closas += divo(y, 187, 134, 24, 24, y, "overflow:hidden;'", "<img src=alerte.gif?3 TITLE='alerter abus' style='position:absolute;left:0;top:0;" + squa + "' onmousedown=alerta() onmouseover=this.style.top=-24; onmouseout='this.style.top=0'; >");
+    closas += divo(y, 187, 134, 24, 24, y, "overflow:hidden;'", "<img src=alerte.gif TITLE='alerter abus' style='position:absolute;left:0;top:0;" + squa + "' onmousedown=alerta() onmouseover=this.style.top=-24; onmouseout='this.style.top=0'; >");
 
-    closas += divo(y, 187, 29, 24, 24, y, "overflow:hidden;'", "<img src=micro.gif?3 TITLE='micro' style='position:absolute;left:0;top:0;" + squa + "' onclick=openmic() onmouseover=this.style.top=-24; onmouseout='this.style.top=0'; >");
+    closas += divo(y, 187, 29, 24, 24, y, "overflow:hidden;'", "<img src=micro.gif TITLE='micro' style='position:absolute;left:0;top:0;" + squa + "' onclick=openmic() onmouseover=this.style.top=-24; onmouseout='this.style.top=0'; >");
 
     closas += divo(y, 6, 14, 20, 15, y, "font-family:" + fixpol + ";'", "ans");
 
