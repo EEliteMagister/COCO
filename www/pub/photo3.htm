@@ -1,0 +1,454 @@
+
+<html>
+
+   <head>
+  <title>CHAT - coco.fr</title>
+<script src="hammer.min.js">
+	</script>
+	
+	<style>
+
+.imageContainer {
+  width: 380px;
+  height: 500px;
+  
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+   background: #bb44cc;
+ 
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.imageContainer > img {
+  display: block;
+  max-width:100%;
+  max-height:100%;
+  
+  touch-action: none;
+  
+}
+</style>		
+
+
+<script LANGUAGE="JavaScript">
+var s7=""+location.href;
+
+//var srv=1+Math.floor(3*Math.random());
+
+var s11=s7.indexOf('#',0);
+var srv=s7.substring(s11+1,s11+2);
+
+var oka="http://pix"+srv+".coco.fr/upload/"+s7.substring(s11+2);
+if(s7.indexOf("https")>-1)
+oka="https"+oka.substring(4);
+//oka="v5.jpg"
+
+
+var imog = new Image();
+imog.src=oka;
+
+var stox="";
+
+var lengas=oka.length;
+var oko=oka.toLowerCase();
+
+var memor=0;
+var memoz=600;
+
+
+var carosmax=48;
+var caros=carosmax;
+var carosy=12;
+
+var ratius=0;
+
+var alterno=0;
+
+var xo,yo;
+
+var xmax=800;
+var ymax=800;
+
+var dejaresize=false;
+var readywindow=false;
+var iter=0;
+
+</script>
+
+
+
+
+</head>
+<body style='background-color:eeeeee;margin:0;overflow:auto;height:100%;width:100%;' >
+
+<div id="daja" class="imageContainer"></div>
+<script LANGUAGE="JavaScript">
+
+
+var imageContainer;
+var displayImage = new Image();
+
+let minScale = 1;
+let maxScale = 4;
+let imageWidth;
+let imageHeight;
+let containerWidth;
+let containerHeight;
+let displayImageX = 0;
+let displayImageY = 0;
+let displayImageScale = 1;
+
+let displayDefaultWidth;
+let displayDefaultHeight;
+
+let rangeX = 0;
+let rangeMaxX = 100;
+let rangeMinX = -100;
+
+let rangeY = 0;
+let rangeMaxY = 0;
+let rangeMinY = 0;
+
+let displayImageRangeY = 0;
+
+let displayImageCurrentX = 0;
+let displayImageCurrentY = 0;
+let displayImageCurrentScale = 1;
+
+
+
+var imageUrl = oka;
+
+
+function goodin()
+{
+
+var w=window,d=document,e=d.documentElement,g=d.getElementsByTagName('body')[0],x=w.innerWidth||e.clientWidth||g.clientWidth,y=w.innerHeight||e.clientHeight||g.clientHeight;
+
+ 
+ xo=x;
+ yo=y;
+ 
+ ymax=window.screen.availHeight-110;
+xmax=window.screen.availWidth-20;   
+
+
+//alert(yo);
+
+if(x<820)
+readywindow=true;
+}
+
+function sizum()
+{
+goodin();
+alterno=(alterno+1)%2;
+if(alterno==1)
+{
+document.getElementById('imago').width=memoz;
+document.getElementById('imago').height=memor;
+
+window.resizeBy(memoz+161-xo,memor+1-yo);
+
+document.getElementById('shrinky').innerHTML="Taille Reduite";
+
+}
+else
+{
+document.getElementById('imago').width=ratius;
+document.getElementById('imago').height=620;
+
+window.resizeBy(ratius+161-xo,621-yo);
+
+document.getElementById('shrinky').innerHTML="Taille Originale";
+
+}
+
+
+
+}
+
+function resiz1()
+{
+goodin();
+if((readywindow)||(iter>8))
+resizex();
+else
+setTimeout("resiz1()",20);
+
+iter++;
+}
+
+
+function resizex()
+{
+
+if(!dejaresize)
+{
+var imog = new Image();
+imog.src=oka;
+
+memor=imog.height;
+memoz=imog.width;
+
+
+var finay=memor;
+if(finay>(ymax))
+finay=ymax;
+
+
+
+if(finay<680)
+finay=680;
+
+if(memor<300)
+{
+if(memoz>(2*memor))
+finay=300;
+}
+
+
+document.getElementById('imago').style.height=finay;
+
+
+
+
+if(memoz>2)
+ratius=(memoz*finay)/memor;
+else
+ratius=650;
+
+ratius=Math.floor(ratius)+1;
+
+window.resizeBy(ratius+161-xo,finay-yo);
+
+
+
+
+
+
+
+
+
+
+imageContainer = document.getElementById("daja");
+
+
+
+
+resizeContainer();
+
+
+
+//window.addEventListener('resize', resizeContainer, true);
+
+
+displayImage.src = imageUrl;
+displayImage.onload = function(){
+ 
+ imageContainer.style.width=memoz;
+ imageContainer.style.height=600;
+ document.getElementById("imago").style.display="none";
+  
+  imageWidth = displayImage.width;
+  imageHeight = displayImage.height;
+  imageContainer.appendChild(displayImage);
+  displayImage.addEventListener('mousedown', e => e.preventDefault(), false);
+  displayDefaultWidth = displayImage.offsetWidth;
+  displayDefaultHeight = displayImage.offsetHeight;
+  rangeX = Math.max(0, displayDefaultWidth - containerWidth);
+  rangeY = Math.max(0, displayDefaultHeight - containerHeight);
+}
+
+imageContainer.addEventListener('wheel', e => {
+  displayImageScale = displayImageCurrentScale = clampScale(displayImageScale + (e.wheelDelta / 800));
+  updateRange();
+  displayImageCurrentX = clamp(displayImageCurrentX, rangeMinX, rangeMaxX)
+  displayImageCurrentY = clamp(displayImageCurrentY, rangeMinY, rangeMaxY)
+	updateDisplayImage(displayImageCurrentX, displayImageCurrentY, displayImageScale);  
+}, false);
+
+
+
+
+
+const hammertime = new Hammer(imageContainer);
+
+hammertime.get('pinch').set({ enable: true });
+hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL});
+
+
+
+hammertime.on('pan', ev => {  
+  displayImageCurrentX = clamp(displayImageX + ev.deltaX, rangeMinX, rangeMaxX);
+  displayImageCurrentY = clamp(displayImageY + ev.deltaY, rangeMinY, rangeMaxY);
+	updateDisplayImage(displayImageCurrentX, displayImageCurrentY, displayImageScale);
+});
+
+hammertime.on('pinch pinchmove', ev => {
+  displayImageCurrentScale = clampScale(ev.scale * displayImageScale);
+  updateRange();
+  displayImageCurrentX = clamp(displayImageX + ev.deltaX, rangeMinX, rangeMaxX);
+  displayImageCurrentY = clamp(displayImageY + ev.deltaY, rangeMinY, rangeMaxY);
+  updateDisplayImage(displayImageCurrentX, displayImageCurrentY, displayImageCurrentScale);
+});
+
+hammertime.on('panend pancancel pinchend pinchcancel', () => {
+  displayImageScale = displayImageCurrentScale;
+  displayImageX = displayImageCurrentX;
+  displayImageY = displayImageCurrentY;
+});  
+
+
+
+
+
+
+
+}
+dejaresize=true;
+
+
+
+}
+
+
+
+function resizeContainer() {
+  containerWidth = imageContainer.offsetWidth;
+  containerHeight = imageContainer.offsetHeight;
+  if (displayDefaultWidth !== undefined && displayDefaultHeight !== undefined) {
+    alert("ffgggggg");
+    displayDefaultWidth = displayImage.offsetWidth;
+    displayDefaultHeight = displayImage.offsetHeight;
+    updateRange();
+    displayImageCurrentX = clamp( displayImageX, rangeMinX, rangeMaxX );
+    displayImageCurrentY = clamp( displayImageY, rangeMinY, rangeMaxY );
+    updateDisplayImage(
+      displayImageCurrentX,
+      displayImageCurrentY,
+      displayImageCurrentScale );
+  }
+}
+
+function updateDisplayImage(x, y, scale) {
+  const transform = 'translateX(' + x + 'px) translateY(' + y + 'px) translateZ(0px) scale(' + scale + ',' + scale + ')';
+  displayImage.style.transform = transform;
+  displayImage.style.WebkitTransform = transform;
+  displayImage.style.msTransform = transform;
+  
+}
+
+function updateRange() {
+  rangeX = Math.max(0, Math.round(displayDefaultWidth * displayImageCurrentScale) - containerWidth);
+  rangeY = Math.max(0, Math.round(displayDefaultHeight * displayImageCurrentScale) - containerHeight);
+  
+  rangeMaxX = Math.round(rangeX / 2);
+  //rangeMaxX = Math.round(rangeX / 2)+100;
+  rangeMinX = 0 - rangeMaxX;
+
+  rangeMaxY = Math.round(rangeY / 2)
+  //rangeMaxY = Math.round(rangeY / 2)+100;
+  rangeMinY = 0 - rangeMaxY;
+}
+
+
+function clamp(value, min, max) {
+  return Math.min(Math.max(min, value), max);
+}
+
+function clampScale(newScale) {
+  return clamp(newScale, minScale, maxScale);
+}
+
+
+
+function fermix()
+{
+
+if(caros<3)
+{
+self.close();
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var iepix="";
+
+caros=0;
+
+stox="";
+
+stox+="<div style='position:absolute;left:160px;top:0;'>";
+
+if ((oko.indexOf('jpg')>lengas-4)||(oko.indexOf('gif')>lengas-4)||(oko.indexOf('png')>lengas-4))
+{
+
+stox+="<a ondblclick='self.close();' style='position:absolute;left:0;top:0;z-index:20;'><img id=imago GALLERYIMG=NO onload=resiz1() src="+oka+" style='z-index:10;height:680px;'></a>";
+
+}
+stox+="</div>";
+
+document.body.innerHTML+=stox;
+
+</script>
+
+
+<div align='left' style='position:relative;left:0;top:0;'>
+
+
+<div id=containo style='position:absolute;left:0;top:0;width:160;height:100%;background-color:#0000ff;overflow:hidden;'>
+
+ 
+</div>
+
+
+
+</div>
+
+
+
+<script LANGUAGE="JavaScript">
+
+
+
+
+//resizex();
+
+
+
+
+
+
+</script>
+
+
+
+
+        </body>
+   </html>
+
+
+
