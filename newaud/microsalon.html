@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LISTEN</title>
+        <style type="text/css">
+         html, body {
+         	  
+         }
+         
+         .error {
+           color: red;
+         }
+        </style>
+        <script> 
+       var mydom=window.location.hostname;
+mydom = mydom.replace('www.','');
+			document.domain=mydom;
+        </script>
+        
+        
+    </head>
+    <body>
+        
+            <video id="video-viewport" style="position:absolute;left:0;top:0;" width="90" height="40" autoplay playsinline controls></video>
+        
+        <button id=playo style="position:absolute;left:6px;font-size:18px;display:none;outline:0;font-family:verdana;width:80px;height:30px;background-color:#5577CC;color:#ffffff;border-radius:7px;" >Play&nbsp;<b>&#9654;</b></button>
+    
+        <script src="./watcher.js"></script>
+        <script>
+        	
+        	
+        	 var mutos=false;
+        	 var streamid="abcdef";
+          var loca=""+location;
+          var indo=loca.indexOf("?");
+          var myid=0;
+          var prima=true;
+          
+         if(indo>-1)
+         {
+         streamid="salon"+loca.substring(indo+7,indo+10);
+         myid=loca.substring(indo+10,indo+16)
+  
+         }
+        
+        
+					
+					var ua = navigator.userAgent.toLowerCase();
+					var ismob = ua.indexOf("android") > -1;
+					
+        	
+	window.addEventListener('message',function(event)
+	{
+	var frum=""+event.data;
+	var level=false;
+	
+
+if(frum.indexOf("mutal")>-1)
+watcher.mute();
+
+
+	if(frum.indexOf("mute")>-1)
+	watcher.mute();
+	if(frum.indexOf("ok")>-1)
+watcher.unmute();
+
+	
+},false);
+        	
+        	
+    	
+        	
+         function render_error(error) {
+             const p = document.createElement("p");
+             p.classList.add("error");
+             p.innerHTML = error;
+             document.body.insertBefore(p, document.body.firstChild);
+         }
+         
+         
+         var $video = document.getElementById('video-viewport');
+         var url1="wss://mic.coco.gg/"+streamid+"/1";
+         
+         
+         var watcher = new Watcher({
+             video: $video,
+             full_server_url: url1,
+             ignoredStreamId: myid,
+         });
+         
+         
+         parent.postMessage("ismute","*");  
+         
+         
+         watcher.onwebsocketconnected = function() {
+             console.log("Websocket connected");
+             
+         };
+         watcher.onspecialcode = function(command) {
+             console.log('got a special command', command);
+         };
+         watcher.onresize = function(params) {}
+         watcher.start().catch((error) => {
+           render_error(error.toString());
+           console.error(error);
+         });
+         
+         watcher.onuserplay = function(callback) {
+             const playButton = document.getElementById("playo");
+             if(prima)
+             playButton.style.display = 'inline';
+             prima=false;
+             
+             playButton.addEventListener('click', function() {
+                 playButton.innerHTML = 'Playing';
+                 playButton.disabled = true;
+                 
+                  
+                 callback();
+                 setTimeout("parent.postMessage('miniframe','*');document.getElementById('playo').style.display='none';document.getElementById('playo').innerHTML='PLAY';",800);
+                 
+                 
+             });
+             //document.body.appendChild(playButton);
+         }
+          
+         
+         
+         
+
+         
+         
+         
+        </script>
+    </body>
+</html>
