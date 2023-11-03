@@ -1,0 +1,292 @@
+
+<html>
+
+   <head>
+  <title>CHAT - coco.gg</title>
+<meta name="viewport" id="viewport" content="width=380, minimal-ui" />
+
+<style>
+
+.vota:hover
+{
+	transform: scale(1.1);
+	font-weight:bold;
+}
+</style>
+
+<script LANGUAGE="JavaScript">
+
+var s7=""+location.href;
+
+//var srv=1+Math.floor(3*Math.random());
+
+var s11=s7.indexOf('#',0);
+var srv=s7.substring(s11+1,s11+2);
+
+var s4=s7.substring(s11+2);
+
+var oka="http://pix"+srv+".coco.gg/upload/"+s4
+if(s7.indexOf("https")>-1)
+oka="https"+oka.substring(4);
+//oka="v5.jpg"
+
+
+var imog = new Image();
+imog.src=oka;
+
+var stox="";
+
+var lengas=oka.length;
+var oko=oka.toLowerCase();
+
+var memor=0;
+var memoz=600;
+
+
+var carosmax=48;
+var caros=carosmax;
+var carosy=12;
+
+var ratius=0;
+
+var alterno=0;
+
+var xo,yo;
+
+var xmax=800;
+var ymax=800;
+
+var dejaresize=false;
+var readywindow=false;
+var iter=0;
+
+</script>
+
+
+
+
+</head>
+<body style='background-color:eeeeee;margin:0;overflow:auto;height:100%;width:100%;font-family:arial;' >
+
+
+<script LANGUAGE="JavaScript">
+
+
+function goodin()
+{
+
+var w=window,d=document,e=d.documentElement,g=d.getElementsByTagName('body')[0],x=w.innerWidth||e.clientWidth||g.clientWidth,y=w.innerHeight||e.clientHeight||g.clientHeight;
+
+ 
+ xo=x;
+ yo=y;
+ 
+ ymax=window.screen.availHeight-110;
+xmax=window.screen.availWidth-20;   
+
+
+//alert(yo);
+
+if(x<820)
+readywindow=true;
+}
+
+function sizum()
+{
+goodin();
+alterno=(alterno+1)%2;
+if(alterno==1)
+{
+document.getElementById('imago').width=memoz;
+document.getElementById('imago').height=memor;
+
+window.resizeBy(memoz+161-xo,memor+1-yo);
+
+document.getElementById('shrinky').innerHTML="Taille Reduite";
+
+}
+else
+{
+document.getElementById('imago').width=ratius;
+document.getElementById('imago').height=620;
+
+window.resizeBy(ratius+161-xo,621-yo);
+
+document.getElementById('shrinky').innerHTML="Taille Originale";
+
+}
+
+
+
+}
+
+function resiz1()
+{
+goodin();
+if((readywindow)||(iter>8))
+resizex();
+else
+setTimeout("resiz1()",20);
+
+iter++;
+}
+
+
+function resizex()
+{
+
+if(!dejaresize)
+{
+var imog = new Image();
+imog.src=oka;
+
+memor=imog.height;
+memoz=imog.width;
+
+
+var finay=memor;
+if(finay>(ymax))
+finay=ymax;
+
+
+
+if(finay<680)
+finay=680;
+
+if(memor<300)
+{
+if(memoz>(2*memor))
+finay=300;
+}
+
+
+document.getElementById('imago').style.height=finay;
+
+
+
+
+if(memoz>2)
+ratius=(memoz*finay)/memor;
+else
+ratius=650;
+
+ratius=Math.floor(ratius)+1;
+
+window.resizeBy(ratius+75-xo,finay-yo);
+
+}
+dejaresize=true;
+
+}
+
+
+function fermix()
+{
+
+if(caros<3)
+{
+self.close();
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var iepix="";
+
+caros=0;
+
+stox="";
+
+stox+="<div style='position:absolute;left:75px;top:0;'>";
+
+if ((oko.indexOf('jpg')>lengas-4)||(oko.indexOf('gif')>lengas-4)||(oko.indexOf('png')>lengas-4))
+{
+
+stox+="<a ondblclick='self.close();' style='position:absolute;left:0;top:0;z-index:20;'><img id=imago GALLERYIMG=NO onload=resiz1() src="+oka+" style='z-index:10;height:680px;'></a>";
+
+}
+stox+="</div>";
+
+document.body.innerHTML+=stox;
+
+</script>
+
+
+
+
+<div id=containo style='position:absolute;left:0;top:0;width:80px;height:100%;z-index:21;'>
+
+ 
+</div>
+
+
+
+
+
+
+
+<script LANGUAGE="JavaScript">
+
+var coul=["57bb8a","73b87e","94bd77","b0be6e","d4c86a","f5ce62","e9b861","ecac67","e79a69","e2886c","dd776e","","",""];
+stox="";
+for (i=0; i<11; i++)
+stox+="<div id='voti"+i+"' class='vota' onmousedown=votus('"+i+"'); style='text-align:center;line-height: 40px;background-color:"+coul[i]+";position:absolute;cursor:default;top:"+(500-i*48)+"px;left:15px;width:40px;height:40px;user-select: none;border-radius:6px;border-style:solid;border-width:2px;border-color:#000;z-index:22;'>"+i+"</div>";
+
+
+document.getElementById('containo').innerHTML+=stox;
+
+function votus(note)
+{
+	for (i=0; i<11; i++)
+	{
+if(i==note)
+{
+	var yyk=document.getElementById("voti"+i);
+	//yyk.style.top="15px";
+	yyk.style.transition="transform 330ms ease-in-out";
+	yyk.style.transform="scale(1.8)";
+	yyk.style.fontWeight="bold";
+	setTimeout("byevote()",1500);
+	
+	//parent.postMessage("FFFFFFf", "*");
+	
+	window.opener.postMessage("77577"+s4+(10+i), "*");
+	yyk.onmousedown=function(){self.close();}
+}
+else
+document.getElementById("voti"+i).style.display="none";
+}	
+}
+function byevote()
+{
+document.getElementById("containo").style.display="none";	
+	
+}
+
+
+
+
+
+
+</script>
+
+
+
+
+        </body>
+   </html>
+
+
+
