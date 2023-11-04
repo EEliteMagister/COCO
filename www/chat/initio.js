@@ -272,10 +272,10 @@ var huho = 1 + randum(3);
 var urlav = "http://pix" + huho + ".coco.gg/";
 var urlphoto = urlav;
 
-var envox = "envoi5.html";
+var envox = "envoi5.html?74";
 try {
     if ('withCredentials'in new XMLHttpRequest())
-        envox = "envoi55.html";
+        envox = "envoi55.html?77";
 } catch (lkdo) {}
 
 var premio = "<a onclick=premiolo(); style='position:relative;color:#080;background-color:#dca;padding:3px;border-radius:3px;'>Premium</a>";
@@ -1285,7 +1285,7 @@ top.location="https://www.coco.gg/chat/cooku.html?"+s33+"----"+infor;
         mobius = "font-size:20px";
 
         try {
-            navigator.serviceWorker.register('../sw.js').then(function(swReg) {
+            navigator.serviceWorker.register('../sw.js?5a').then(function(swReg) {
                 console.log('Service Worker is registered', swReg);
 
             }).catch(function(error) {
