@@ -416,7 +416,7 @@ function camul(glw) {
 
 function amigo() {
 
-    ecritab("<span style='" + c12 + "'>vous venez de proposer à " + tabname[ongleto] + " d'etre votre ami</span><br>", ongleto);
+    ecritab("<span style='" + c12 + "'>vous venez de proposer ? " + tabname[ongleto] + " d'etre votre ami</span><br>", ongleto);
 
     agir("46" + tabnickID[ongleto]);
 
@@ -842,7 +842,7 @@ function verif(sgu) {
 }
 
 function messamiz(szs) {
-    errora(-1, 120, 180, "Ecrivez votre mail à votre Amiz " + szs + "<br>Ce message pourra etre lu une fois la personne connectée<br><br><TEXTAREA type=text MAXLENGTH=180 id=messamu onmousedown=nofocus(); style='width:340;height:80;'></TEXTAREA><input type=button Value='Envoyer' onclick=messamo('" + szs + "');><br>", 370);
+    errora(-1, 120, 180, "Ecrivez votre mail ? votre Amiz " + szs + "<br>Ce message pourra etre lu une fois la personne connectée<br><br><TEXTAREA type=text MAXLENGTH=180 id=messamu onmousedown=nofocus(); style='width:340;height:80;'></TEXTAREA><input type=button Value='Envoyer' onclick=messamo('" + szs + "');><br>", 370);
 }
 function messamo(nqn) {
     var jjj = ReplaceAll(document.getElementById("messamu").value, "\n", ".");
@@ -948,7 +948,7 @@ function shieldum() {
         sauve(0);
     } else {
         fullopen = true;
-        errora(7000, 305, 40, "Vous venez de désactiver le bouclier antipervers<br>à vos risques et périls...", 400);
+        errora(7000, 305, 40, "Vous venez de désactiver le bouclier antipervers<br>? vos risques et périls...", 400);
         agir("43000");
         sauve(1);
     }
