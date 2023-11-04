@@ -18,7 +18,7 @@ function reche() {
 }
 function recpseudo() {
     if (myver > 3) {
-        var qcz = "Rentrez les 4 ou 5 premieres lettres du pseudo à rechercher";
+        var qcz = "Rentrez les 4 ou 5 premieres lettres du pseudo ? rechercher";
         if (tablet) {
             kbon();
             document.getElementById("searchy").innerHTML = divo(y, 10, 60, y, y, y, "'", qcz);
@@ -433,8 +433,8 @@ function actusaloo() {
         else if (salsex[i] > 4) {
             var wjk = "";
 
-            //colu=divo(y,salnom[i].length*8+45,0,15,15,y,"font-family:"+fixpol+";z-index:50;' onclick=showy("+salID[i]+","+i+"); "+wjk+" "+roug,"ò");
-            colu = "<span style='position:relative;font-family:" + fixpol + ";z-index:50;left:45px;' onclick=showy(" + salID[i] + "," + i + "); " + wjk + " " + roug + ">ò</span>";
+            //colu=divo(y,salnom[i].length*8+45,0,15,15,y,"font-family:"+fixpol+";z-index:50;' onclick=showy("+salID[i]+","+i+"); "+wjk+" "+roug,"?");
+            colu = "<span style='position:relative;font-family:" + fixpol + ";z-index:50;left:45px;' onclick=showy(" + salID[i] + "," + i + "); " + wjk + " " + roug + ">?</span>";
 
         }
         if ((dvh != 0) || lesbo) {
@@ -1065,7 +1065,7 @@ function creaprivo() {
         } else
             alert("caracteres interdits");
     } else
-        messig("vous devez avoir niv.5 ou être Premium pour creer un salon");
+        messig("vous devez avoir niv.5 ou ?tre Premium pour creer un salon");
 }
 
 function messig(hsp) {
@@ -1117,6 +1117,6 @@ function envoicapch() {
 }
 
 function ghosto() {
-    disp(6000, 220, -30, "vous etes en navigation privée<br><br>desactivez la navigation privée dans les parametres de votre navigateur<br><br>sinon vous perdrez votre compte à chaque reconnexion ...", 340, -1, 'bda', true, false);
+    disp(6000, 220, -30, "vous etes en navigation privée<br><br>desactivez la navigation privée dans les parametres de votre navigateur<br><br>sinon vous perdrez votre compte ? chaque reconnexion ...", 340, -1, 'bda', true, false);
 
 }
