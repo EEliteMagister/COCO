@@ -129,7 +129,7 @@ tabcity[currentab]="0000"+townius;
         solicited = false;
 
     } else {
-        document.getElementById("babar").innerHTML = "vous devez etre authentifié pour parler à cette personne";
+        document.getElementById("babar").innerHTML = "vous devez etre authentifié pour parler ? cette personne";
         setTimeout("autbar(4)", 1500);
     }
 }
