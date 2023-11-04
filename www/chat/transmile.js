@@ -1120,3 +1120,4 @@ function getconf() {
     var laconf = localStorage.getItem("myconf");
 
 }
+
